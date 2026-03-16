@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    double primernum;
+    cout<<"Ingrese su primer numero: ";
+    cin>>primernum;
+    
+    double segundonum;
+    cout<<"Ingrese su segundo numero: ";
+    cin>>segundonum;
+    
+    double tercernum;
+    cout<<"Ingrese su tercer numero: ";
+    cin>>tercernum;
+    
+    double promedio;
+    
+    promedio = (primernum + segundonum + tercernum)/3;
+    cout<<promedio;
+    
+    return 0;
+}
+
+
+// Complejidad Big O: O(1)
+// Justificacion: El programa siempre realiza un número fijo de operaciones: pide tres números, 
+realiza una suma y una división, y muestra el resultado. 
+No depende del tamaño de ninguna entrada ni utiliza ciclos que crezcan con los datos, 
+por lo que el tiempo de ejecución es constante.
