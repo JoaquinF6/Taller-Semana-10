@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int n;
+    cout << "Cuantos numeros vas a ingresar? ";
+    cin >> n;
+
+    int numero;
+    int mayor;
+    int menor;
+
+    for(int i = 1; i <= n; i++){
+        cout << "Ingrese numero " << i << ": ";
+        cin >> numero;
+
+        if(i == 1){
+            mayor = numero;
+            menor = numero;
+        }
+
+        if(numero > mayor){
+            mayor = numero;
+        }
+
+        if(numero < menor){
+            menor = numero;
+        }
+    }
+
+    cout << "El mayor es: " << mayor << endl;
+    cout << "El menor es: " << menor << endl;
+
+    return 0;
+}
+
+Complejidad Big O: O(n)
+Justificaci´on: El programa usa un ciclo for que se repite n veces, 
+donde n es la cantidad de números que el usuario ingresa. En cada iteración solo se realizan operaciones simples 
+(leer el número y compararlo con el mayor y el menor), que toman tiempo constante, 
+por lo que el tiempo total crece proporcionalmente a n.
