@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int n;
+    cout << "Cuantos numeros vas a ingresar? ";
+    cin >> n;
+
+    int numeros[100];
+
+    for(int i = 0; i < n; i++){
+        cout << "Ingrese numero " << i + 1 << ": ";
+        cin >> numeros[i];
+    }
+
+    cout << "\nParejas:\n";
+
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(i != j){
+                cout << "(" << numeros[i] << ", " << numeros[j] << ")" << endl;
+            }
+        }
+    }
+
+    return 0;
+}
+
+Complejidad Big O: O(n²)
+El programa utiliza dos ciclos for anidados.
+El primero se repite n veces y dentro de él el segundo también se repite n veces, por lo que el número total de operaciones crece proporcionalmente a n × n = n²
+
