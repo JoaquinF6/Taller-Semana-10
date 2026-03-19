@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int numero;
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+
+    int contador = 0;
+
+    while(numero > 1){
+        int resultado = numero / 2;
+        cout << numero << " / 2 = " << resultado << endl;
+        numero = resultado;
+        contador++;
+    }
+
+    cout << "\nSe dividio " << contador << " veces" << endl;
+
+    return 0;
+}
+
+Complejidad Big O: O(log n)
+En cada iteración el número se divide entre 2, por lo que su valor se reduce a la mitad cada vez.
+Esto significa que la cantidad de iteraciones crece de forma logarítmica respecto al tamaño del número inicial, por lo que el tiempo de ejecución es O(log n).
